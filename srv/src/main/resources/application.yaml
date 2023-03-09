@@ -1,0 +1,16 @@
+spring:
+  config.activate.on-profile: cloud
+cds:
+  datasource:
+    auto-config.enabled: false
+  security:
+    mock:
+      users:
+        - name: taskmanager
+          password: admin123
+  messaging:
+    services:
+      name: "taskmanager-events"
+      kind: "enterprise-messaging"
+      queue: 
+        name: "user-registration"
